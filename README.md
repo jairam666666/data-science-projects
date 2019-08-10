@@ -26,3 +26,9 @@ The discriminator and generator models are trained in an adversarial zero-sum pr
 Loss Function:
 
 In addition to the Generator and Discriminator loss, it has one more type of loss called as Cyclic-Consistency loss given by :
+Passing an image through both generators is called a cycle. Together, each pair of generator models are trained to better reproduce the original source image, referred to as cycle consistency.
+
+    Domain-B -> Generator-A -> Domain-A -> Generator-B -> Domain-B
+    Domain-A -> Generator-B -> Domain-B -> Generator-A -> Domain-A
+
+There is one further element to the architecture referred to as the identity mapping.
