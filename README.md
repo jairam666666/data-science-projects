@@ -17,9 +17,9 @@ The generator models perform image translation, meaning that the image generatio
 Each generator has a corresponding discriminator model. The first discriminator model (Discriminator-A) takes real images from Domain-A and generated images from Generator-A and predicts whether they are real or fake. The second discriminator model (Discriminator-B) takes real images from Domain-B and generated images from Generator-B and predicts whether they are real or fake.
 
     Domain-A -> Discriminator-A -> [Real/Fake]
-    Domain-B -> Generator-A -> Discriminator-A -> [Real/Fake]
+    Domain-B -> Generator-A -> Discriminator-A 
     Domain-B -> Discriminator-B -> [Real/Fake]
-    Domain-A -> Generator-B -> Discriminator-B -> [Real/Fake]
+    Domain-A -> Generator-B -> Discriminator-B 
 
 The discriminator and generator models are trained in an adversarial zero-sum process, like normal GAN models. The generators learn to better fool the discriminators and the discriminator learn to better detect fake images. Together, the models find an equilibrium during the training process.
 
